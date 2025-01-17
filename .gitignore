@@ -1,0 +1,16 @@
+# Compiled files
+*.class
+build/
+dist/
+
+# BlueJ
+*.ctxt
+bluej.pkh
+doc/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml

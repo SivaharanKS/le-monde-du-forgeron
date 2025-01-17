@@ -1,0 +1,14 @@
+va bas
+regarder
+retour
+prendre Fonte
+va bas 
+va gauche 
+prendre FerForgé
+aide
+va sud
+prendre Viande
+inventaire
+va sud
+manger Viande
+inventaire

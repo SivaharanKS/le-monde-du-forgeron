@@ -1,0 +1,32 @@
+prendre Fonte
+prendre MasqueDeForge
+va bas
+va gauche
+prendre AcierTrempé
+prendre FerForgé
+va sud
+inventaire
+prendre Viande
+manger Viande
+inventaire
+va sud
+prendre PierreVolcanique
+prendre BoisDeChêne
+va droite
+va bas
+va droite
+prendre teleporteur
+va gauche
+va haut
+va droite
+prendre Potions
+prendre GantsDeForge
+va nord
+va nord
+prendre BriquesRefractaires
+prendre CharbonSpécial
+va droite
+prendre CuireRenforcé
+prendre FerBrut 
+va haut
+inventaire

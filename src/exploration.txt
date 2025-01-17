@@ -1,0 +1,22 @@
+va bas
+va gauche
+va sud
+va sud
+va droite
+va bas
+va droite
+va droite
+va gauche
+va gauche
+va haut
+va droite
+va nord
+va nord
+va droite 
+va haut
+retour
+aide
+inventaire
+regarder
+manger 
+quitter

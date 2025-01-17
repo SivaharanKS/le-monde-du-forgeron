@@ -1,0 +1,79 @@
+import java.util.StringTokenizer;
+
+/**
+ * This class is part of the "World of Zuul" application. 
+ * "World of Zuul" is a very simple, text based adventure game.  
+ * 
+ * This parser reads user input and tries to interpret it as an "Adventure"
+ * command. Every time it is called it reads a line from the terminal and
+ * tries to interpret the line as a two word command. It returns the command
+ * as an object of class Command.
+ *
+ * The parser has a set of known command words. It checks user input against
+ * the known commands, and if the input is not one of the known commands, it
+ * returns a command object that is marked as an unknown command.
+ * 
+ * @author  Michael Kolling and David J. Barnes + Sivaharan
+ * @version 2008.03.30 + 2013.09.15
+ */
+public class Parser 
+{
+    private CommandWords aValidCommands;  // (voir la classe CommandWords)
+
+    /**
+     * Constructeur par defaut qui cree les 2 objets prevus pour les attributs
+     */
+    public Parser() 
+    {
+        this.aValidCommands = new CommandWords();
+    } // Parser()
+
+    /**
+     * @return The next command from the user.
+     */
+    public Command getCommand( final String pInputLine ) 
+    {
+        String vWord1;
+        String vWord2;
+
+        StringTokenizer tokenizer = new StringTokenizer( pInputLine );
+        
+        if ( tokenizer.hasMoreTokens() )      
+            vWord1 = tokenizer.nextToken();    // Obtenir le 1er mots
+        else 
+            vWord1 = null;
+        
+        if ( tokenizer.hasMoreTokens() )
+            vWord2 = tokenizer.nextToken();      // Obtenir le 2e mots
+        else
+            vWord2 = null;
+
+        // Verifie si le premier mot est une commande connue.
+        // Si oui, cree un objet Command avec ce mot. (vWord2 peut etre null)
+        // Sinon, cree une commande vide avec "null" (pour dire 'commande inconnue').
+        if ( this.aValidCommands.isCommand( vWord1 ) ) {
+            return new Command( vWord1, vWord2 );
+        }
+        else {
+            return new Command( null, null ); 
+        }
+    } // getCommand()
+    
+    /**
+     * Une procédure pour afficher des commandes valides,
+     * showCommands()
+     */
+    public void showCommands()
+    {
+        aValidCommands.showAll();
+    }// showCommands()
+    
+    /**
+     * Qui retourne les String Valide dans le liste de commande
+     * getCommandString()
+     */
+    public String getCommandString() // was showCommands()
+    {
+        return this.aValidCommands.getCommandList();
+    } // getCommandString()
+} // Parser
